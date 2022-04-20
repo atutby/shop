@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.7-slim
 MAINTAINER Mykhailo Lazoryk
 
 ENV PYTHONUNBUFFERED 1
@@ -11,6 +11,6 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-RUN adduser -D user
+RUN useradd user
 
 USER user
