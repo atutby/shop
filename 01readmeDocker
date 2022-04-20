@@ -87,5 +87,38 @@ $ git commit -m 'First lesson commit#2 add 01readmeDocker .travis .flake8 and up
 # https://app.travis-ci.com/getting_started
 # Нажимаем кнопку: Sync account
 
-# git add .
-# git commit -m "First commit for ITVDN COURSE"
+
+$ git add .
+$ git commit -m "First commit for ITVDN COURSE"
+
+
+$ git push origin # не сработала поэтому делаем следующее
+# зашёл на https://www.youtube.com/watch?v=SdILWnuiMOY (Дмитрий Тхоржевский)
+# https://www.kobzarev.com/programming/use-token-for-github-actions-with-private-repositories/
+#
+$ git branch -M admin
+$ git remote add origin https://github.com/atutby/shop.git
+$ git push -u origin main # не сработало опять и выдало ошибку: необходимости сгенерировать специальный token
+# Посмотрим содержимое config
+$ cat .git/config
+# На сайте www.github.com переходим:
+    Settings >
+    (внизу) Developer settings >
+    (раздел) Personal access tokens >
+    (кнопка) Generage new token >
+        (на странице указываем)
+        Note: shop
+        Expiration: 30 days (May 20 2022) 
+        Select scopes: (отметил все)
+        (кнопка внизу) Generate token >
+    (копируем token) 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28
+    (теперь будем токен вводить вместо пароля: $ git push)
+
+
+$ git push -u origin main
+# в последующем делаем только $ git push
+
+# если необходимо выполнить отдельные команды то делаем так:
+$ docker-compose run app sh -c "python manage.py createsuperuser"
+# superuser:ADS8JAsjjS28:superuser@gmail.com
+
