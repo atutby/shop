@@ -68,9 +68,24 @@ $ docker-compose build
 
 # Поднимаем сервер:
 $ docker-compose up
+# Всё запустилось, правда пришлось закрыть терминал и запустить
 
 # Останавливаем сервер:
 $ Ctrl-C
 $ git status
 $ git add .
 $ git commit -m 'First lesson commit#2 add 01readmeDocker .travis .flake8 and update files'
+
+
+# time 01:04:20
+
+
+# заходим на сайт https://travis-ci.org и авторизуемся
+    Since June 15th, 2021, the building on travis-ci.org is ceased. Please use travis-ci.com from now on.
+# заходим на www.travis-ci.com
+# активируем репозиторий с github
+# https://app.travis-ci.com/getting_started
+# Нажимаем кнопку: Sync account
+
+# git add .
+# git commit -m "First commit for ITVDN COURSE"
